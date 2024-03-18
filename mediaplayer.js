@@ -1,5 +1,3 @@
-const swup = new Swup();
-
 const image = document.getElementById("cover"),
   title = document.getElementById("music-title"),
   artist = document.getElementById("artist-name"),
@@ -23,7 +21,7 @@ const songs = [
   {
     path: "songs/Djapo - Exception (Original Mix).mp3",
     displayName: "Exception",
-    cover: "/images/ambi_records_djapo.jpg.jpg",
+    cover: "/images/ambi_records_djapo.jpg",
   },
   {
     path: "songs/Liguligu (Djapo Remix) premaster.wav",
@@ -118,3 +116,6 @@ music.addEventListener("timeupdate", updateProgress);
 songProgress.addEventListener("click", setProgress);
 
 loadMusic(songs[musicIndex]);
+
+console.log(musicIndex);
+console.log(songs[musicIndex]);

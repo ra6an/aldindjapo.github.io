@@ -53,7 +53,7 @@ main {
 .navbar {
   z-index: 1;
   width: 5rem;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-color: var(--lightblack);
   transition: all 0.2s ease;
@@ -112,7 +112,7 @@ main {
 
 .main-bio {
   margin-top: 9rem;
-  width: 50rem;
+  max-width: 50rem;
   font-size: 80px;
   padding-right: 15rem;
   text-shadow: #8592a7;
@@ -159,19 +159,19 @@ svg {
 
 .transition-fade {
   opacity: 1;
-  transition: 700ms;
+  transition: 600ms;
   transform: translateX(0);
   transform-origin: left;
 }
 
 html.is-animating .transition-fade {
   opacity: 1;
-  transform: translateX(100%);
+  transform: translateX(80%);
 }
 
 html.is-leaving .transition-fade {
   opacity: 0;
-  transform: translateX(0%);
+  transform: translateX(40%);
 }
 
 .btns .cv {
@@ -216,7 +216,7 @@ html.is-leaving .transition-fade {
 }
 
 .social-links {
-  width: 30%;
+  width: 15rem;
   margin-left: -2.8rem;
 }
 
@@ -501,6 +501,11 @@ form {
 .about-bio {
   margin: 0;
 }
+.col-1,
+.col-2 {
+  column-count: 2;
+  column-gap: 4rem;
+}
 
 .music-main {
   margin: 0 auto;
@@ -639,4 +644,66 @@ form {
 .fa-pause {
   cursor: pointer;
   font-size: 3rem;
+}
+
+@media (max-width: 1750px) {
+  .main-bio {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-bio {
+    font-size: 40px;
+    padding-right: 5rem;
+  }
+  .main-img {
+    width: 28rem;
+  }
+  .btns {
+    width: 10rem;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .btns .cv {
+    width: 10rem;
+    text-align: center;
+  }
+  .btns .hire-me {
+    width: 10rem;
+    text-align: center;
+  }
+}
+/* 
+@media (max-width: 1150px) {
+  .main-bio {
+    font-size: 30px;
+  }
+  .main-img {
+    width: 26rem;
+  }
+} */
+
+@media (max-width: 1050px) {
+  .main-bio {
+    font-size: 30px;
+    padding-left: -5rem;
+  }
+  .main-img {
+    width: 26rem;
+  }
+  .navbar {
+    display: flex;
+    top: 0px;
+    left: 0px;
+  }
+  .navbar:hover {
+    width: 5rem;
+  }
+  .navbar:hover .link-text {
+    display: none;
+  }
 }
